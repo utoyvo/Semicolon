@@ -33,14 +33,15 @@ utoyvo(at)protonmail(dot)com   \______/
 	<link rel="stylesheet" type="text/css" href="public/assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="public/assets/css/fullpage.css">
 	<style>
-		body.fp-viewing-lorem-ipsum #img-lorem-ipsum { z-index: 9999; }
-		/*body.fp-viewing-lorem-ipsum{ background: #222; }*/
+		body.fp-viewing-lorem-ipsum #img-lorem-ipsum,
+		body.fp-viewing-hello-world #img-hello-world,
+		body.fp-viewing-somethings #img-somethings,
+		body.fp-viewing-one-more #img-one-more { z-index: 9999; }
 
-		body.fp-viewing-hello-world #img-hello-world { z-index: 9999; }
-		/*body.fp-viewing-hello-world{ background: #444; }*/
-
-		body.fp-viewing-somethings #img-somethings { z-index: 9999; }
-		/*body.fp-viewing-somethings{ background: #888; }*/
+		body.fp-viewing-lorem-ipsum #page { background: #880; }
+		body.fp-viewing-hello-world #page { background: #080; }
+		body.fp-viewing-somethings #page { background: #088; }
+		body.fp-viewing-one-more #page { background: #008; }
 	</style>
 
 	<!-- icons -->
@@ -48,20 +49,25 @@ utoyvo(at)protonmail(dot)com   \______/
 </head>
 
 <body>
-<div id="page" class="site">
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<h1 class="site-title">ANN MANANKINA</h1>
-			<p class="site-description screen-reader-text">Lorem ipsum...</p>
-		</div><!-- .site-branding -->
+<div id="page">
+	<header id="masthead">
+		<div class="branding">
+			<h1 class="title">Ann Manankina</h1>
+			<p class="description screen-reader-text">Lorem ipsum...</p>
+		</div><!-- .branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="navigation">
 			<ul>
 				<li><a href="#/" class="active">Works</a></li>
 				<li><a href="#/about">About</a></li>
 			</ul>
-		</nav><!-- #site-navigation -->
+		</nav><!-- #navigation -->
 	</header><!-- #masthead -->
+
+
+
+
+
 
 	<div id="content" class="site-content">
 		<ul id="scene" class="site-scene">
@@ -76,36 +82,47 @@ utoyvo(at)protonmail(dot)com   \______/
 			<li id="img-somethings" class="layer" data-depth="2.2">
 				<img src="public/uploads/3.jpg" style="-webkit-transform: rotate( 15deg ); -moz-transform: rotate( 15deg ); -o-transform: rotate( 15deg ); -ms-transform: rotate( 15deg );">
 			</li>
+
+			<li id="img-one-more" class="layer" data-depth="2.0">
+				<img src="public/uploads/4.jpg" style="-webkit-transform: rotate( 20deg ); -moz-transform: rotate( 20deg ); -o-transform: rotate( 20deg ); -ms-transform: rotate( 20deg );">
+			</li>
 		</ul><!-- #scene -->
 
 		<main id="main" class="site-main">
 			<article class="section entry">
 				<header class="entry-header">
 					<h2 class="entry-title"><a href="#/lorem-ipsum">MULTIMODALITY MODE</a></h2>
-					<p class="entry-description screen-reader-text">Lorem ipsum...</p>
+					<p class="entry-description">Non-stop media</p>
 				</header>
 			</article>
 
 			<article class="section entry">
 				<header class="entry-header">
 					<h2 class="entry-title"><a href="#/hello-world">Session room</a></h2>
-					<p class="entry-description screen-reader-text">Lorem ipsum...</p>
+					<p class="entry-description">Lorem ipsum...</p>
 				</header>
 			</article>
 
 			<article class="section entry">
 				<header class="entry-header">
 					<h2 class="entry-title"><a href="#/somethings">Pink or Blue</a></h2>
-					<p class="entry-description screen-reader-text">Lorem ipsum...</p>
+					<p class="entry-description">Lorem ipsum...</p>
+				</header>
+			</article>
+
+			<article class="section entry">
+				<header class="entry-header">
+					<h2 class="entry-title"><a href="#/one-more">"Age, city, unknown"</a></h2>
+					<p class="entry-description">Lorem ipsum...</p>
 				</header>
 			</article>
 		</main><!-- #main -->
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+	<footer id="colophon">
+		<div class="info">
 			<p>With <span style="color:#f00"><3</span> by <a href="https://utoyvo.github.io/">@utoyvo</a></p>
-		</div><!-- .site-info -->
+		</div><!-- .info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
@@ -126,10 +143,10 @@ jQuery(document).ready(function(){
 		navigation        : true,
 		navigationPosition: "left",
 		scrollOverflow    : false,
-		scrollingSpeed    : 500,
+		scrollingSpeed    : 0,
 		scrollBar         : false,
 		keyboardScrolling : true,
-		anchors           : ["lorem-ipsum","hello-world","somethings"],
+		anchors           : ["lorem-ipsum", "hello-world", "somethings", "one-more"],
 	});
 
 	$.fn.fullpage.setAllowScrolling(true);
