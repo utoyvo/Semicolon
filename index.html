@@ -1,0 +1,147 @@
+<!--        $$\
+            $$ |
+$$\   $$\ $$$$$$\    $$$$$$\  $$\   $$\ $$\    $$\  $$$$$$\
+$$ |  $$ |\_$$  _|  $$  __$$\ $$ |  $$ |\$$\  $$  |$$  __$$\
+$$ |  $$ |  $$ |    $$ /  $$ |$$ |  $$ | \$$\$$  / $$ /  $$ |
+$$ |  $$ |  $$ |$$\ $$ |  $$ |$$ |  $$ |  \$$$  /  $$ |  $$ |
+\$$$$$$  |  \$$$$  |\$$$$$$  |\$$$$$$$ |   \$  /   \$$$$$$  |
+ \______/    \____/  \______/  \____$$ |    \_/     \______/
+                              $$\   $$ |
+https://utoyvo.github.io      \$$$$$$  |
+utoyvo(at)protonmail(dot)com   \______/
+-->
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<!-- dns prefetch -->
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<link rel="dns-prefetch" href="//">
+
+	<title>ANN MANANKINA</title>
+	<meta name="description" content="Lorem ipsum...">
+	<meta name="keywords" content="">
+	<meta name="robots" content="index, follow">
+
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="public/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="public/assets/css/fullpage.css">
+	<style>
+		body.fp-viewing-lorem-ipsum #img-lorem-ipsum { z-index: 9999; }
+		/*body.fp-viewing-lorem-ipsum{ background: #222; }*/
+
+		body.fp-viewing-hello-world #img-hello-world { z-index: 9999; }
+		/*body.fp-viewing-hello-world{ background: #444; }*/
+
+		body.fp-viewing-somethings #img-somethings { z-index: 9999; }
+		/*body.fp-viewing-somethings{ background: #888; }*/
+	</style>
+
+	<!-- icons -->
+	<link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+<div id="page" class="site">
+	<header id="masthead" class="site-header">
+		<div class="site-branding">
+			<h1 class="site-title">ANN MANANKINA</h1>
+			<p class="site-description screen-reader-text">Lorem ipsum...</p>
+		</div><!-- .site-branding -->
+
+		<nav id="site-navigation" class="main-navigation">
+			<ul>
+				<li><a href="#/" class="active">Works</a></li>
+				<li><a href="#/about">About</a></li>
+			</ul>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+		<ul id="scene" class="site-scene">
+			<li id="img-lorem-ipsum" class="layer" data-depth="2.8">
+				<img src="public/uploads/1.jpg" style="-webkit-transform: rotate( 12deg ); -moz-transform: rotate( 12deg ); -o-transform: rotate( 12deg ); -ms-transform: rotate( 12deg );">
+			</li>
+
+			<li id="img-hello-world" class="layer" data-depth="2.5">
+				<img src="public/uploads/2.jpg" style="-webkit-transform: rotate( 18deg ); -moz-transform: rotate( 18deg ); -o-transform: rotate( 18deg ); -ms-transform: rotate( 18deg );">
+			</li>
+
+			<li id="img-somethings" class="layer" data-depth="2.2">
+				<img src="public/uploads/3.jpg" style="-webkit-transform: rotate( 15deg ); -moz-transform: rotate( 15deg ); -o-transform: rotate( 15deg ); -ms-transform: rotate( 15deg );">
+			</li>
+		</ul><!-- #scene -->
+
+		<main id="main" class="site-main">
+			<article class="section entry">
+				<header class="entry-header">
+					<h2 class="entry-title"><a href="#/lorem-ipsum">MULTIMODALITY MODE</a></h2>
+					<p class="entry-description screen-reader-text">Lorem ipsum...</p>
+				</header>
+			</article>
+
+			<article class="section entry">
+				<header class="entry-header">
+					<h2 class="entry-title"><a href="#/hello-world">Session room</a></h2>
+					<p class="entry-description screen-reader-text">Lorem ipsum...</p>
+				</header>
+			</article>
+
+			<article class="section entry">
+				<header class="entry-header">
+					<h2 class="entry-title"><a href="#/somethings">Pink or Blue</a></h2>
+					<p class="entry-description screen-reader-text">Lorem ipsum...</p>
+				</header>
+			</article>
+		</main><!-- #main -->
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer">
+		<div class="site-info">
+			<p>With <span style="color:#f00"><3</span> by <a href="https://utoyvo.github.io/">@utoyvo</a></p>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<div id="preloader">
+	<p>Loading...</p>
+</div><!-- #preloader -->
+
+<!-- scripts -->
+<script src="public/assets/libs/jquery-3.5.1.min.js"></script>
+<script src="public/assets/libs/fullpage-3.0.7.min.js"></script>
+<script src="public/assets/libs/parallax-1.0.0.min.js"></script>
+<script src="public/assets/js/tinkerbell-magic-sparkle.js"></script>
+<script src="public/assets/js/app.js"></script>
+<script>
+jQuery(document).ready(function(){
+	/* Full Page */
+	$( "#main" ).fullpage({
+		navigation        : true,
+		navigationPosition: "left",
+		scrollOverflow    : false,
+		scrollingSpeed    : 500,
+		scrollBar         : false,
+		keyboardScrolling : true,
+		anchors           : ["lorem-ipsum","hello-world","somethings"],
+	});
+
+	$.fn.fullpage.setAllowScrolling(true);
+
+	/* Parallax */
+	$("#scene").parallax();
+	$("#scene").css({height:window.innerHeight + "px"});
+
+	/* Preloader */
+	$("#page").fadeIn(1000);
+	$("#preloader").fadeOut(500);
+}); // jQuery
+</script>
+
+</body></html>
