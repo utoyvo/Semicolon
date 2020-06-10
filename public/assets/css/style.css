@@ -284,7 +284,7 @@ a:hover, a:active {
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000;
+	z-index: 9999;
 }
 
 
@@ -468,7 +468,7 @@ a:hover, a:active {
 }
 
 .entry .entry-header {
-	width: 66.66666%;
+	width: 70%;
 }
 
 .entry .entry-header .entry-title,
